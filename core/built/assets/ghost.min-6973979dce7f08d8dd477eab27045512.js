@@ -1223,7 +1223,7 @@ e.default=Ember.Service.extend({config:Ember.inject.service(),settings:Ember.inj
 return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return t=a+"/photos?per_page=30",e.next=3,this._makeRequest(t)
 case 3:case"end":return e.stop()}},e,this)})).group("_loadingTasks"),_loadNextPage:(0,n.task)(regeneratorRuntime.mark(function e(){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,this._makeRequest(this._pagination.next)
 case 2:case"end":return e.stop()}},e,this)})).group("_loadingTasks"),_retryLastRequest:(0,n.task)(regeneratorRuntime.mark(function e(){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,this._makeRequest(this._lastRequestUrl)
-case 2:case"end":return e.stop()}},e,this)})).group("_loadingTasks"),_search:(0,n.task)(regeneratorRuntime.mark(function e(t){var s
+case 2:case"end":return e.stop()}},e,this)})).group("_loadingTasks"),_search:(0,n.task)(regeneratorRuntime.mark(function e(t){var s 
 return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,(0,n.timeout)(600)
 case 2:return s=a+"/search/photos?query="+t+"&per_page=30",e.next=5,this._makeRequest(s)
 case 5:case"end":return e.stop()}},e,this)})).restartable(),_addPhotosFromResponse:function(e){var t=this;(e.results||e).forEach(function(e){return t._addPhoto(e)})},_addPhoto:function(e){e.ratio=e.height/e.width,this.get("photos").pushObject(e),this._addPhotoToColumns(e)},_addPhotoToColumns:function(e){var t=Math.min.apply(Math,function(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t]
